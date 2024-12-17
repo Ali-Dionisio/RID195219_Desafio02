@@ -2,7 +2,10 @@
     font-family: "Montserrat", sans-serif;
     margin: 0;
     font-size: 12px;
-
+    
+}
+main{
+    margin: 3rem 5rem 0 5rem;
 }
 h2{
     font-size: 2rem;
@@ -41,15 +44,12 @@ footer h3{
 }
 .grid-column-container{
     display: grid;
-    grid-template-columns: 60% auto;
+    grid-template-columns: 70% auto;
     grid-template-rows: 1;
     gap: 1.5rem;
 }
-main{
-    margin: 3rem 0 0 6rem;
-}
 #presentation{
-    height: 70vh;
+    height: 100%;
     background: linear-gradient(rgba(102, 102, 102, 0) 0%, #000000 100%), url(./img/predio.jfif);
     border-radius: 10px;
     background-repeat: no-repeat;
@@ -57,6 +57,7 @@ main{
     display: flex;
     align-items: end;
     color: #fff;
+    cursor: pointer;
 }
 #presentation div{
     padding: 0px;
@@ -66,8 +67,9 @@ main{
 .grid-container > .design2, 
 .grid-container > .design3, 
 .grid-container > .design4{
-    border-radius: 17px;
+    border-radius: 20px;
     box-shadow: 2px 2px 8px #616161;
+    cursor: pointer;
 }
 .grid-column > img, .grid-container img {
     width: 100%;
@@ -131,8 +133,91 @@ main{
     font-weight: 500;
     font-size: 1rem;
     display: flex;
-    justify-content: baseline;
 }
 .design-text{
     padding: 1rem;
+}
+.grid-column > .titulo-card > h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1rem 1.5rem 1rem 1.5rem;
+}
+.listaCategorias ul{
+    list-style: none;
+    color: #616161;
+    font-weight: 600;
+    padding: 0;
+
+}
+.listaCategorias li{
+    margin-top: 1rem;
+    cursor: pointer;
+}
+ul {
+    display: flex;
+    justify-content:space-between;
+}
+.card-posts img{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+.card-posts{
+    margin-top: 9%;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 1px 2px 6px #616161;
+    display: flex;
+    cursor: pointer;
+}
+.texto-posts {
+    margin-left: 1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.texto-posts .footerCard{
+    margin-top: .5rem;
+}
+.texto-posts h3 {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+}
+@media only screen and (max-width: 768px) {
+    header h1{
+        font-size: 1rem
+    }
+    main{
+    margin: 1% 4% 0 2%;
+
+    }
+    #presentation{
+        height: 50vw;
+    }
+    .grid-column-container{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 1.5rem;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 1.5rem;
+        padding: 1rem 0;
+    }
+    .design1{
+        grid-area:  1 / 1;
+    }
+    .design2{
+        grid-area:  2 / 1;
+    }
+    .design3{
+        grid-area:  3 / 1;
+    }
+    .design4{
+        grid-area:  4 / 1;
+    }
+    .card-posts {
+     margin-top: 3%;
+    }
+    
 }
